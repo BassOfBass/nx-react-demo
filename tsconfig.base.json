@@ -15,7 +15,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nx-react-demo/react-lib": ["libs/react-lib/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
