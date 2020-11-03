@@ -19,16 +19,19 @@
       "runner": "@nrwl/nx-cloud",
       "options": {
         "accessToken": "NmFlNzM5M2YtMTJjNy00ODdlLWEwNWEtZGU1MGExYTI1NDQ2fHJlYWQtd3JpdGU=",
-        "cacheableOperations": [
-          "build",
-          "test",
-          "lint",
-          "e2e"
-        ],
+        "cacheableOperations": ["build", "test", "lint", "e2e"],
         "canTrackAnalytics": false,
         "showUsageWarnings": true
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "store": {
+      "tags": []
+    },
+    "store-e2e": {
+      "tags": [],
+      "implicitDependencies": ["store"]
+    }
+  }
 }
