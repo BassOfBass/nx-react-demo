@@ -4,5 +4,6 @@ module.exports = {
     '<rootDir>/libs/react-lib',
     '<rootDir>/libs/store/ui-shared',
     '<rootDir>/libs/store/util-formatters',
+    '<rootDir>/libs/store/feature-game-detail',
   ],
 };
