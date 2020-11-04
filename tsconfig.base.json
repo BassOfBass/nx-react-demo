@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-react-demo/react-lib": ["libs/react-lib/src/index.ts"]
+      "@nx-react-demo/react-lib": ["libs/react-lib/src/index.ts"],
+      "@nx-react-demo/store/ui-shared": ["libs/store/ui-shared/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

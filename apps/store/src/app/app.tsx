@@ -1,6 +1,4 @@
 import React from 'react';
-
-import './app.less';
 import { 
   Card, 
   CardActionArea, 
@@ -8,12 +6,16 @@ import {
   CardMedia, 
   Typography 
 } from "@material-ui/core";
+
+import './app.less';
+import { Header } from "@nx-react-demo/store/ui-shared";
 import { games } from "../api";
 
 export function App() {
   
   return (
     <>
+      <Header />
       <main>
         <GamesLayout />
       </main>
