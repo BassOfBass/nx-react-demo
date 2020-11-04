@@ -9,6 +9,7 @@ import {
 
 import './app.less';
 import { Header } from "@nx-react-demo/store/ui-shared";
+import { formatRating } from "@nx-react-demo/store/util-formatters";
 import { games } from "../api";
 
 export function App() {
@@ -51,7 +52,7 @@ function GamesLayout() {
                 component="p" 
                 className="rating"
               >
-                <strong>Rating:</strong> {game.rating}
+                <strong>Rating:</strong> {formatRating(game.rating)}
               </Typography>
             </CardContent>
           </CardActionArea>
