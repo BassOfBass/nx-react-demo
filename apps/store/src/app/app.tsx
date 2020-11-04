@@ -10,10 +10,9 @@ import {
 
 import './app.less';
 import { Header } from '@nx-react-demo/store/ui-shared';
-import { formatRating } from '@nx-react-demo/store/util-formatters';
-import { games } from '../api';
-
 import { StoreFeatureGameDetail } from '@nx-react-demo/store/feature-game-detail';
+import { formatRating } from '@nx-react-demo/store/util-formatters';
+
 
 function App() {
   return (
@@ -31,6 +30,10 @@ function App() {
  */
 function GamesLayout() {
   const history = useHistory();
+
+  React.useEffect(() => {
+    
+  });
 
   return (
     <>

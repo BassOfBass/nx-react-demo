@@ -44,7 +44,5 @@ export const games = [
 ];
 
 export function getGame( id: string ) {
-  games.find((game) => {
-    game.id === id;
-  });
+  return games.find(game => game.id === id );
 }
