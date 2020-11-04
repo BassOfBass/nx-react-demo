@@ -28,15 +28,15 @@ function GamesLayout() {
 
   return (
     <section className="games">
-      {games.map((game) => {
-        <Card key={game.id} className="gamecard">
-          <CardActionArea>
+      {games.map((game) => 
+        (<Card key={game.id} className="gamecard">
+          <CardActionArea className="details">
             <CardMedia
-              className="gamecardmedia"
+              className="media"
               image={game.image}
               title={game.name} 
             />
-            <CardContent>
+            <CardContent className="content">
               <Typography gutterBottom variant="h5" component="h2" >
                 {game.name}
               </Typography>
@@ -47,14 +47,14 @@ function GamesLayout() {
                 variant="body2" 
                 color="textSecondary" 
                 component="p" 
-                className="game-rating"
+                className="rating"
               >
                 <strong>Rating:</strong> {game.rating}
               </Typography>
             </CardContent>
           </CardActionArea>
-        </Card>
-      })}
+        </Card>)
+      )}
     </section>
   );
 }

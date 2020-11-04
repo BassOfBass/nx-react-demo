@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  --color0-primary: hsl(0, 0%, 20%);
+  --color0-secondary: hsl(0, 0%, 80%);
+  --duration-base: 0.5s;
+  --width-mobile: 360px;
+  --width-tablet: 720px;
+  --width-desktop: 1080px;
+}
+
+html {
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  transition-duration: var(--duration-base);
+}
+
+body {
+  height: 100%;
+  color: var(--color0-primary);
+  background-color: var(--color0-secondary);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
