@@ -59,7 +59,7 @@ function GamesLayout() {
       }
     })();
     
-  }, []);
+  }, [games]);
 
   return (
     <>
