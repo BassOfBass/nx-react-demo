@@ -15,8 +15,13 @@
             "main": "apps/store/src/main.tsx",
             "polyfills": "apps/store/src/polyfills.ts",
             "tsConfig": "apps/store/tsconfig.app.json",
-            "assets": ["apps/store/src/favicon.ico", "apps/store/src/assets"],
-            "styles": ["apps/store/src/styles.less"],
+            "assets": [
+              "apps/store/src/favicon.ico",
+              "apps/store/src/assets"
+            ],
+            "styles": [
+              "apps/store/src/styles.less"
+            ],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
           },
@@ -74,7 +79,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/store/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": [
+              "apps/store/**/*.{ts,tsx,js,jsx}"
+            ]
           }
         },
         "test": {
@@ -107,7 +114,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/store-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/store-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
@@ -121,7 +130,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/react-lib/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": [
+              "libs/react-lib/**/*.{ts,tsx,js,jsx}"
+            ]
           }
         },
         "test": {
@@ -142,7 +153,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/store/ui-shared/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": [
+              "libs/store/ui-shared/**/*.{ts,tsx,js,jsx}"
+            ]
           }
         },
         "test": {
@@ -150,6 +163,36 @@
           "options": {
             "jestConfig": "libs/store/ui-shared/jest.config.js",
             "passWithNoTests": true
+          }
+        },
+        "storybook": {
+          "builder": "@nrwl/storybook:storybook",
+          "options": {
+            "uiFramework": "@storybook/react",
+            "port": 4400,
+            "config": {
+              "configFolder": "libs/store/ui-shared/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        },
+        "build-storybook": {
+          "builder": "@nrwl/storybook:build",
+          "options": {
+            "uiFramework": "@storybook/react",
+            "outputPath": "dist/storybook/store-ui-shared",
+            "config": {
+              "configFolder": "libs/store/ui-shared/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
           }
         }
       }
@@ -163,7 +206,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/store/util-formatters/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/store/util-formatters/**/*.ts"
+            ]
           }
         },
         "test": {
@@ -211,7 +256,9 @@
             "outputPath": "dist/apps/api",
             "main": "apps/api/src/main.ts",
             "tsConfig": "apps/api/tsconfig.app.json",
-            "assets": ["apps/api/src/assets"]
+            "assets": [
+              "apps/api/src/assets"
+            ]
           },
           "configurations": {
             "production": {
@@ -236,7 +283,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/api/**/*.ts"]
+            "lintFilePatterns": [
+              "apps/api/**/*.ts"
+            ]
           }
         },
         "test": {
@@ -257,7 +306,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/api/util-interfaces/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/api/util-interfaces/**/*.ts"
+            ]
           }
         },
         "test": {
@@ -265,6 +316,34 @@
           "options": {
             "jestConfig": "libs/api/util-interfaces/jest.config.js",
             "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "store-ui-shared-e2e": {
+      "root": "apps/store-ui-shared-e2e",
+      "sourceRoot": "apps/store-ui-shared-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/store-ui-shared-e2e/cypress.json",
+            "tsConfig": "apps/store-ui-shared-e2e/tsconfig.e2e.json",
+            "devServerTarget": "store-ui-shared:storybook"
+          },
+          "configurations": {
+            "ci": {
+              "devServerTarget": "store-ui-shared:storybook:ci"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/store-ui-shared-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }

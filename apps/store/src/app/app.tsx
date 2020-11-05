@@ -17,7 +17,7 @@ import { formatRating } from '@nx-react-demo/store/util-formatters';
 function App() {
   return (
     <>
-      <Header />
+      <Header title="Board Games" />
       <main>
         <GamesLayout />
       </main>
