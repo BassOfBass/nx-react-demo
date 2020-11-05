@@ -13,7 +13,9 @@ type TParams = { id: string };
 export interface StoreFeatureGameDetailProps extends RouteComponentProps<TParams> {}
 
 /**
- * TODO: figure out typing involving Classes
+ * TODO: figure out typing involving Classes.
+ * 
+ * TODO: write tests.
  * @param props 
  */
 export const StoreFeatureGameDetail = (props: StoreFeatureGameDetailProps) => {

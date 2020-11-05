@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       <Header title="Board Games" />
-      <main>
+      <main data-testid="app-container">
         <GamesLayout />
       </main>
     </>

@@ -14,6 +14,9 @@ export interface HeaderProps {
   title: string;
 }
 
+/**
+ * TODO: investigate why `npx nx generate @nrwl/react:storybook-configuration store-ui-shared --configureCypress --generateStories --dryRun` didn't create storybook file
+ */
 export function Header({ title }: HeaderProps): JSX.Element {
   const classes = useStyles();
 
